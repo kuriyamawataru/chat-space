@@ -1,0 +1,26 @@
+.side-bar
+  .header
+    .header__items
+      %p.header__items--name
+        航
+      .header__items--icons
+        = link_to "#" , class: "setting" do
+          = icon('far', 'edit', class: "header__items--icons--left")
+          %span<>
+        = link_to "#" , class: "setting" do
+          = icon('fas', 'cog', class: "header__items--icons--right")
+      
+  .groups
+    = link_to "#", class: "group" do
+      .group__name
+        techcamp
+      .group__message
+        まだ新着メッセージはありません
+    = link_to "#", class: "group" do
+      .group__name
+        techcamp
+      .group__message
+        まだ新着メッセージはありません
+
+    
+    
