@@ -2,12 +2,12 @@
   .header
     .header__items
       %p.header__items--name
-        航
+        = current_user.name
       .header__items--icons
         = link_to "#" , class: "setting" do
           = icon('far', 'edit', class: "header__items--icons--left")
           %span<>
-        = link_to "#" , class: "setting" do
+        = link_to edit_user_path(current_user), class: "setting" do
           = icon('fas', 'cog', class: "header__items--icons--right")
       
   .groups
