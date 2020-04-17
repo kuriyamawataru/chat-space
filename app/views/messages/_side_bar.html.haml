@@ -4,23 +4,20 @@
       %p.header__items--name
         = current_user.name
       .header__items--icons
-        = link_to "#" , class: "setting" do
+        = link_to new_group_path(current_user) , class: "setting" do
           = icon('far', 'edit', class: "header__items--icons--left")
           %span<>
         = link_to edit_user_path(current_user), class: "setting" do
           = icon('fas', 'cog', class: "header__items--icons--right")
-      
-  .groups
-    = link_to "#", class: "group" do
-      .group__name
-        techcamp
-      .group__message
-        まだ新着メッセージはありません
-    = link_to "#", class: "group" do
-      .group__name
-        techcamp
-      .group__message
-        まだ新着メッセージはありません
 
-    
+
+     
+  .groups
+    - current_user.groups.each do |group|
+      = link_to "#", class: "group" do
+        .group__name
+          = group.name
+        .group__message
+          まだ新着メッセージはありません
+
     
