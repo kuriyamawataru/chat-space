@@ -55,8 +55,7 @@ body {
       margin-right: 40px;
       margin-top: 30px;
     
-      a{
-        display: block;
+      .edit-btn{
         text-decoration: none;  
         color: #38aef0;
         font-size: 16px;
@@ -73,6 +72,7 @@ body {
     background-color: #fafafa;
     width: 100%;
     height: calc(100% - 190px);
+    overflow: scroll;
     .message{
       margin-left: 40px;
       padding-top: 46px;
